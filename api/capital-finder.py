@@ -24,7 +24,7 @@ class handler(BaseHTTPRequestHandler):
             url = f"https://restcountries.com/v3.1/capital/{capital}"
             response = requests.get(url)
             data = response.json()
-            country = data[0]["name"]["common"][0]
+            country = data[0]["name"]["common"]
             capital = capital.title()
             message = f"{capital} is the capital of {country}."
 
